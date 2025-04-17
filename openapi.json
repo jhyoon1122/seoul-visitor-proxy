@@ -50,7 +50,55 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object"
+                  "type": "object",
+                  "properties": {
+                    "list_total_count": {
+                      "type": "integer"
+                    },
+                    "RESULT": {
+                      "type": "object",
+                      "properties": {
+                        "CODE": {
+                          "type": "string"
+                        },
+                        "MESSAGE": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "rows": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "MODEL_NM": {
+                            "type": "string"
+                          },
+                          "SERIAL_NO": {
+                            "type": "string"
+                          },
+                          "SENSING_TIME": {
+                            "type": "string"
+                          },
+                          "REGION": {
+                            "type": "string"
+                          },
+                          "AUTONOMOUS_DISTRICT": {
+                            "type": "string"
+                          },
+                          "ADMINISTRATIVE_DISTRICT": {
+                            "type": "string"
+                          },
+                          "VISITOR_COUNT": {
+                            "type": "integer"
+                          },
+                          "REG_DTTM": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
                 }
               }
             }
