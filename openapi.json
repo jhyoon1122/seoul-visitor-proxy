@@ -7,7 +7,7 @@
   },
   "servers": [
     {
-      "url": "https://seoul-visitor-proxy.vercel.app/api/visitor-count"
+      "url": "https://seoul-visitor-proxy.vercel.app/api/"
     }
   ],
   "paths": {
@@ -46,7 +46,7 @@
         ],
         "responses": {
           "200": {
-            "description": "JSON 형식의 유동인구 센서 데이터",
+            "description": "유동인구 JSON 데이터",
             "content": {
               "application/json": {
                 "schema": {
