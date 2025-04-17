@@ -7,7 +7,7 @@
   },
   "servers": [
     {
-      "url": "https://seoul-visitor-proxy.vercel.app/api/"
+      "url": "https://seoul-visitor-proxy.vercel.app/api/visitor-count"
     }
   ],
   "paths": {
@@ -52,18 +52,12 @@
                 "schema": {
                   "type": "object",
                   "properties": {
-                    "list_total_count": {
-                      "type": "integer"
-                    },
+                    "list_total_count": { "type": "integer" },
                     "RESULT": {
                       "type": "object",
                       "properties": {
-                        "CODE": {
-                          "type": "string"
-                        },
-                        "MESSAGE": {
-                          "type": "string"
-                        }
+                        "CODE": { "type": "string" },
+                        "MESSAGE": { "type": "string" }
                       }
                     },
                     "rows": {
