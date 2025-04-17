@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Seoul Visitor Data",
+  "name_for_model": "seoulVisitor",
+  "description_for_human": "서울시 유동인구 데이터를 확인합니다.",
+  "description_for_model": "Get real-time visitor count data from Seoul's IoT sensors.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://seoul-visitor-proxy.vercel.app/openapi.json"
+  },
+  "logo_url": "https://avatars.githubusercontent.com/u/9919?s=200&v=4",
+  "contact_email": "you@example.com",
+  "legal_info_url": "https://example.com/legal"
+}
