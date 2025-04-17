@@ -2,7 +2,7 @@
   "openapi": "3.1.0",
   "info": {
     "title": "Seoul Visitor Proxy API",
-    "description": "서울시 유동인구 데이터를 JSON으로 반환하는 프록시 API",
+    "description": "서울시 유동인구 데이터를 JSON으로 반환하는 프록시 API입니다.",
     "version": "1.0.0"
   },
   "servers": [
@@ -14,7 +14,7 @@
     "/": {
       "get": {
         "operationId": "getVisitorCounts",
-        "summary": "유동인구 데이터 조회",
+        "summary": "서울시 유동인구 센서 데이터 조회",
         "parameters": [
           {
             "name": "apiKey",
@@ -46,7 +46,7 @@
         ],
         "responses": {
           "200": {
-            "description": "유동인구 JSON 데이터",
+            "description": "JSON 형식의 유동인구 센서 데이터",
             "content": {
               "application/json": {
                 "schema": {
