@@ -1,0 +1,88 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Seoul Visitor Proxy API",
+    "description": "서울시 유동인구 데이터를 JSON으로 반환하는 프록시 API",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://seoul-visitor-proxy.vercel.app/api" 
+    }
+  ],
+  "paths": {
+    "/visitor-count": {
+      "get": {
+        "operationId": "getVisitorCounts",
+        "summary": "유동인구 데이터 조회",
+        "parameters": [
+          {
+            "name": "apiKey",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "7146505663676f6f3833484d725366"
+            }
+          },
+          {
+            "name": "startIndex",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "example": 1
+            }
+          },
+          {
+            "name": "endIndex",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "example": 5
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "유동인구 JSON 데이터",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "list_total_count": { "type": "integer" },
+                    "RESULT": {
+                      "type": "object",
+                      "properties": {
+                        "CODE": { "type": "string" },
+                        "MESSAGE": { "type": "string" }
+                      }
+                    },
+                    "rows": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "MODEL_NM": { "type": "string" },
+                          "SERIAL_NO": { "type": "string" },
+                          "SENSING_TIME": { "type": "string" },
+                          "REGION": { "type": "string" },
+                          "AUTONOMOUS_DISTRICT": { "type": "string" },
+                          "ADMINISTRATIVE_DISTRICT": { "type": "string" },
+                          "VISITOR_COUNT": { "type": "integer" },
+                          "REG_DTTM": { "type": "string" }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}
